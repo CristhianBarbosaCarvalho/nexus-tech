@@ -617,8 +617,8 @@ button:focus-visible {
 
 .services-heading {
     max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
 }
 
 .services-heading h1 {
@@ -638,7 +638,7 @@ button:focus-visible {
 .services-intro {
     max-width: 760px;
     margin: 28px auto 82px;
-    color: #bdbdbd;
+    text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -672,5 +672,6 @@ button:focus-visible {
     .services-main > .navbar .brand img {
         width: 190px;
     }
+    
 }
 
