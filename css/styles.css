@@ -17,15 +17,28 @@ a:focus-visible {
     outline: 2px solid  #636869;
 }
 
-header {
+header {    
     background-color: #636869;
-    padding: 10px;
-    text-align: center;
+    padding: 15px;
+    margin: 0px;
+    text-align: start;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
+
+header h1 {
+    font-size: 2.5em;
+    padding: 20px;
+    margin: 20px;
+}
+
+header p {
+    padding: 20px;
+    margin: 20px;
+}
+
 
 nav ul {
     list-style-type: none;
