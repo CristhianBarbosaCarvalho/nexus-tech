@@ -602,3 +602,75 @@ button:focus-visible {
         font-size: 1.25rem;
     }
 }
+
+/* Acabamento do cabeçalho da página de serviços */
+.services-main > .navbar {
+    width: 100%;
+    min-height: 104px;
+    margin-bottom: 66px;
+    border-bottom-color: rgba(255, 255, 255, .22);
+}
+
+.services-main > .navbar .brand img {
+    width: 270px;
+}
+
+.services-heading {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-heading h1 {
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    letter-spacing: -.05em;
+}
+
+.services-subtitle {
+    display: inline-block;
+    margin: 16px 0 0;
+    color: #c2c2c2;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: .025em;
+}
+
+.services-intro {
+    max-width: 760px;
+    margin: 28px auto 82px;
+    color: #bdbdbd;
+}
+
+@media (max-width: 800px) {
+    .services-main > .navbar {
+        min-height: 88px;
+        margin-bottom: 48px;
+    }
+
+    .services-main > .navbar .brand img {
+        width: 225px;
+    }
+
+    .services-heading {
+        text-align: left;
+    }
+
+    .services-subtitle {
+        margin-top: 12px;
+    }
+
+    .services-intro {
+        margin: 26px 0 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-main > .navbar {
+        margin-bottom: 38px;
+    }
+
+    .services-main > .navbar .brand img {
+        width: 190px;
+    }
+}
+
