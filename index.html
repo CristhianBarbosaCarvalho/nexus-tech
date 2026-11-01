@@ -3,32 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nexus Tech: soluções em tecnologia, manutenção e suporte para seus equipamentos.">
+    <title>Nexus Tech | Tecnologia sem preocupações</title>
     <link rel="stylesheet" href="css/styles.css">
-    <title>Nexus Tech</title>
 </head>
 <body>
-    <header>
-        <img src="img/Captura de tela 2026-10-07 213344.png" alt="Logo da Nexus Tech">
-        <h1>Tecnologia funcionando.<br>Você sem preocupações.</h1>
-            <p>Cuidamos da sua tecnologia para você seguir em frente</p>
+    <header class="hero" id="inicio">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a class="brand" href="index.html" aria-label="Nexus Tech - Início">
+                <img src="img/Captura de tela 2026-10-07 213344.png" alt="Logo Nexus Tech">
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="views/servicos.html">Serviços</a></li>
+                <li><a href="views/sobre.html">Sobre</a></li>
+                <li><a href="views/contato.html" class="nav-contact">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <p class="eyebrow">NEXUS TECH · SOLUÇÕES EM TECNOLOGIA</p>
+            <h1>Tecnologia funcionando.<br>Você sem preocupações.</h1>
+            <p class="hero-description">Cuidamos da sua tecnologia para você seguir em frente.</p>
+            <a class="button button-light" href="views/servicos.html">Conheça nossos serviços <span aria-hidden="true">→</span></a>
+        </div>
+        <a class="scroll-cue" href="#empresa">Role para conhecer <span aria-hidden="true">↓</span></a>
     </header>
+
     <main>
-        <section>
-            <h2>Perfil da empresa</h2>
-            <p>Na Nexus Tech, acreditamos que a tecnologia deve facilitar sua vida. Trabalhamos com diagnóstico, manutenção e melhorias, buscando oferecer soluções adequadas para cada necessidade.
-Frase de destaque:
-"Cuidamos da sua tecnologia para você seguir em frente."</p>
+        <section class="about section-shell" id="empresa">
+            <div class="about-image">
+                <img src="img/Site Empresarial Aplicativo de Tecnologia Ousado Roxo e Azul-escuro222.png" alt="Arquitetura moderna de um edifício">
+            </div>
+            <div class="about-content">
+                <p class="eyebrow">QUEM SOMOS</p>
+                <h2>Tecnologia feita para simplificar sua vida.</h2>
+                <p>Na Nexus Tech, acreditamos que a tecnologia deve facilitar sua rotina. Trabalhamos com diagnóstico, manutenção e melhorias, buscando soluções adequadas para cada necessidade.</p>
+                <p>Nosso compromisso é oferecer um atendimento claro, cuidadoso e focado em manter seus equipamentos funcionando.</p>
+                <a class="text-link" href="views/sobre.html">Conheça a Nexus Tech <span aria-hidden="true">→</span></a>
+            </div>
         </section>
-        <section>
-            <nav>
-                <ul>
-                    <li><a href="views/servicos.html">Serviços</a></li>
-                    <li><a href="views/sobre.html">Sobre</a></li>
-                    <li><a href="views/contato.html">Contato</a></li>
-                </ul>
-            </nav>
+
+        <section class="statement">
+            <div class="statement-inner">
+                <span class="quote-mark" aria-hidden="true">“</span>
+                <h2>Sua tecnologia deve trabalhar por você, não o contrário.</h2>
+                <p>Conte com a Nexus Tech para cuidar dos seus equipamentos.</p>
+                <a class="button button-outline" href="views/contato.html">Fale com a gente <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="services-preview section-shell">
+            <div>
+                <p class="eyebrow">COMO PODEMOS AJUDAR</p>
+                <h2>Soluções para sua tecnologia.</h2>
+            </div>
+            <p>Do diagnóstico ao suporte, encontre o cuidado que seus equipamentos precisam.</p>
+            <a class="text-link" href="views/servicos.html">Ver todos os serviços <span aria-hidden="true">→</span></a>
         </section>
     </main>
 
+    <footer class="footer">
+        <a class="footer-brand" href="#inicio">NEXUS TECH</a>
+        <p>Tecnologia funcionando. Você sem preocupações.</p>
+        <nav aria-label="Navegação do rodapé">
+            <a href="views/servicos.html">Serviços</a>
+            <a href="views/sobre.html">Sobre</a>
+            <a href="views/contato.html">Contato</a>
+        </nav>
+        <small>© 2026 Nexus Tech. Todos os direitos reservados.</small>
+    </footer>
+
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            menuButton.setAttribute("aria-expanded", String(!isOpen));
+            menuButton.setAttribute("aria-label", isOpen ? "Abrir menu" : "Fechar menu");
+            navLinks.classList.toggle("is-open", !isOpen);
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("is-open");
+                menuButton.setAttribute("aria-expanded", "false");
+                menuButton.setAttribute("aria-label", "Abrir menu");
+            });
+        });
+    </script>
 </body>
 </html>
